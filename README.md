@@ -46,6 +46,89 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
+### Project Structure
+AwesomeProject
+  -src
+    |--- assets
+    |      |--- fonts
+    |            |--- <<Your Fonts>>
+    |      |--- images
+    |            |--- << Your Images>>
+    |
+    |
+    |--- route
+    |      |--- screenName
+    |      |      |--- index.js
+    |      |      |--- styles.ts
+    |      |      |--- helper.ts
+    |      |      |--- screenName.tsx
+    |      |      |--- screenName.test.tsx
+    |      |      |--- useAnimated.ts (Optional)
+    |      |      |--- components (Optional)
+    |      |
+    |      |--- screenName2
+    |              |--- index.js
+    |              |--- styles.ts
+    |              |--- helper.ts
+    |              |--- screenName.tsx
+    |              |--- screenName.test.tsx
+    |              |--- useAnimated.ts (Optional)
+    |              |--- components (Optional)
+    |  
+    |--- navigation
+    |      |--- NavigationContainer
+    |      |--- Route
+    |      |--- NavigationService
+    |      |--- linking
+    |
+    |--- networking
+    |      |--- apiclient
+    |      |--- requestInterceptor (Assuming axios)
+    |      |--- responseInterceptor (Assuming axios)
+    |      |--- urls
+    |      |--- UserApi (You can create a file for a group of related api calls)
+    |
+    |--- components
+    |      |---Button (This is will have same structure as the screen)
+    |      |      |--- index.ts
+    |      |      |--- Button.tsx
+    |      |      |--- styles.ts
+    |      |      |--- helper.ts
+    |      |      |--- useAnimated.ts (Optional)
+    |      |
+    |      |--- <<Any other component>>
+    |
+    |--- hooks
+    |      |--- useBackHandler.ts
+    |      |--- useKeyboard.ts
+    |      |--- useUploadImage.ts
+    |      |--- useCamera.ts
+    |      |--- <<Any other hook>>
+    |
+    |--- types 
+    |      |--- UserInterface
+    |      |--- MediaInterface
+    |      |--- AppConfigInterface
+    |
+    |--- redux
+    |      |--- store.ts
+    |      |--- slices
+    |            |--- UserSlice
+    |            |--- IntermittentSlice
+    |            |--- ToastSlice
+    |
+    |--- utils
+    |      |--- Analytics.ts
+    |      |--- CommonUtils.ts
+    |      |--- Logger.ts
+    |      |--- ErrorManager.ts
+    |      |--- DateTimeUtils.ts
+    |      |--- EncryptedStore.ts
+    |      |--- string.ts
+    |      |--- constants.ts
+    |      |--- enums.ts
+
+
 # Learn More
 
 To learn more about React Native, take a look at the following resources:
